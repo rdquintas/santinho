@@ -1,0 +1,56 @@
+/**********************
+* BASE
+***********************/
+
+*, :after, :before {
+    box-sizing: border-box
+}
+
+html {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+body {
+    margin: 5%;
+    font-size: 100%;
+    line-height: 1.414em
+}
+
+.no-pointers, .no-pointers:active, .no-pointers:focus, .no-pointers:hover, .no-pointers:visited {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none
+}
+
+.browserupdate {
+    display: block;
+    margin-bottom: 3em;
+    padding: 2em;
+    color: #fff;
+    text-align: center;
+    background-color: red
+}
+
+.browserupdate a {
+    color: #fff;
+    text-decoration: underline
+}
+
+.browserupdate a:hover {
+    color: #ddd
+}
+/**********************
+* M-HEADER
+***********************/
+
+#m-header {
+    text-align: center;
+}
+/**********************
+* M-BUTTON
+***********************/
+#m-button {
+    text-align: center;
+}

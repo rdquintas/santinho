@@ -1,73 +1,86 @@
 <!DOCTYPE html>
-<!-- 
-   Hi, you're looking at a web page built with love by:
-
-   Ricardo
-
-  /$$$$$$            /$$             /$$                        
- /$$__  $$          |__/            | $$                        
-| $$  \ $$ /$$   /$$ /$$ /$$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$$
-| $$  | $$| $$  | $$| $$| $$__  $$|_  $$_/   |____  $$ /$$_____/
-| $$  | $$| $$  | $$| $$| $$  \ $$  | $$      /$$$$$$$|  $$$$$$ 
-| $$/$$ $$| $$  | $$| $$| $$  | $$  | $$ /$$ /$$__  $$ \____  $$
-|  $$$$$$/|  $$$$$$/| $$| $$  | $$  |  $$$$/|  $$$$$$$ /$$$$$$$/
- \____ $$$ \______/ |__/|__/  |__/   \___/   \_______/|_______/ 
-      \__/                                                                      
-
-   ricardoquintas.com   
-   January/2015 
--->
+<html lang="en" class="no-js">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin">
-    <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
-    <link rel="stylesheet" href="css/style.dist.css" />
-    <title></title>
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullscreen Pageflip Layout with BookBlock</title>
+    <meta name="description" content="Fullscreen Pageflip Layout with BookBlock" />
+    <meta name="keywords" content="fullscreen pageflip, booklet, layout, bookblock, jquery plugin, flipboard layout, sidebar menu" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
+    <link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom.css" />
+    <script src="js/modernizr.custom.79639.js"></script>
+    <style type="text/css">
+    .content {
+        text-align: center;
+    }
+    
+    .hero {
+        max-width: 100%;
+    }
+    
+    .ornament {
+        max-width: 40%;
+    }
+    </style>
 </head>
 
 <body>
-
-    <!--[if lte IE 9]>
-    <div class="browserupdate">
-        You are using an obsolete browser which can harm your experience and cause security troubles.
-        <br> Please <a href="http://browsehappy.com/" target="_blank">update your browser!</a>
-    </div>
-  <![endif]-->
-    <noscript>
-        <div class="browserupdate">
-            Oh, no! You don't have JavaScript enabled on your browser!
-            <br> This website only works with JavaScript. Sorry.
+    <div id="container" class="container">
+        <div class="bb-custom-wrapper">
+            <div id="bb-bookblock" class="bb-bookblock">
+                <div class="bb-item" id="item1">
+                    <div class="content">
+                        <!-- <div class="scroller"> -->
+                        <div><img class="hero" src="img/santinho.jpg" alt=""></div>
+                        <!-- </div> -->
+                        <button id="btn-santinho">Click me</button>
+                        <div><img class="ornament" src="img/ornament.png" alt=""></div>
+                    </div>
+                </div>
+                <div class="bb-item" id="item2">
+                    <div class="content">
+                        <button id="btn-back">Back</button>
+                        <div class="scroller">
+                            <h2>Nossa Senhora dos Agriões de Cucujães e arredores</h2>
+                            <p>But few of the human race die of old age. Besides the thousand and one diseases flesh is heir to, and the disease which Mrs. O'Flannagan said her husband died of, viz., "Of a Saturday 'tis that poor Mike died," very ma</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid a, officia ipsam. Mollitia quas amet autem, deserunt porro nobis voluptatum. Voluptatum atque sunt, aliquam aperiam quaerat eligendi, at neque harum nam nulla rerum iste quisquam repellat minus excepturi. Fuga hic tempora accusantium repudiandae fugit maxime amet porro, pariatur quam illum harum eos, corporis iste sunt doloribus, fugiat quas nobis doloremque aperiam voluptatibus ipsam eveniet id? Quae mollitia sint exercitationem tenetur asperiores consequuntur magni fugiat cupiditate repellendus doloribus, sed voluptates, alias doloremque reprehenderit nisi perspiciatis debitis quam, nemo dicta temporibus placeat, vel quisquam sapiente tempora. Ut expedita, voluptatibus est ratione consequuntur inventore magnam rem qui laboriosam dolorum. Voluptate, recusandae ipsum quo tenetur, dignissimos nesciunt, velit dolore architecto ipsa dolores delectus omnis et iure. Error mollitia porro aperiam, sapiente earum aspernatur voluptas, nesciunt temporibus, quia enim libero! Est, rerum officia, ullam sapiente, eligendi animi officiis voluptates iusto autem vero nesciunt neque deleniti dolor laudantium dolorem optio et quam rem maxime laborum aspernatur. Nostrum repellendus, libero nulla aspernatur eum, quisquam eius ea est dicta cupiditate, similique modi dignissimos labore! Quis sit placeat a beatae autem fugit. Rem impedit debitis, vero deleniti neque cupiditate quia nam adipisci sunt dolore! Eum, autem vel dolores officiis amet tempora illum ipsum repellendus dolorum fugit cum maiores earum quaerat asperiores expedita voluptatibus quis ipsa alias dolore placeat labore est voluptatem. Explicabo, laborum, corporis? Aspernatur quibusdam adipisci aliquam, quam ducimus necessitatibus a. Tempora ullam vitae accusantium, quibusdam culpa aliquam debitis eaque, voluptatem deserunt. Ad iste optio incidunt maxime temporibus fuga assumenda molestiae delectus, maiores enim ullam recusandae commodi ipsum aperiam expedita atque veniam officia in provident deleniti nobis magnam facere asperiores! Dolorem hic est iste excepturi. Natus, ut, consequatur. Ipsum distinctio inventore tempora cupiditate aspernatur vitae itaque repellat. Perferendis, voluptas, aspernatur. Cumque voluptates pariatur aliquid, distinctio nulla expedita amet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </noscript>
+    </div>
+    <!-- /container -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <!-- <script src="js/jquery.mousewheel.js"></script> -->
+    <!-- <script src="js/jquery.jscrollpane.min.js"></script> -->
+    <script src="js/jquerypp.custom.js"></script>
+    <script src="js/jquery.bookblock.js"></script>
+    <!-- <script src="js/page.js"></script> -->
+    <script>
+    $(function() {
+        // Page.init();
 
-    <h1>Header 1</h1>
-    <h2>Header 2</h2>
-    <h3>Header 3</h3>
-    <h4>Header 4</h4>
-    <h5>Header 5</h5>
-    <h6>Header 6</h6>
+        var bb = $('#bb-bookblock').bookblock({
+            speed: 800,
+            perspective: 2000,
+            nextEl: "#btn-santinho",
+            prevEl: "#btn-back",
+            shadowSides: 0.8,
+            shadowFlip: 0.4
+        });
 
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit iusto adipisci, cupiditate animi, itaque qui aspernatur vel corrupti labore minima, excepturi ab, fuga rem dolores. Ratione sunt autem iusto aliquid.
-    </p>
-
-    <ul>
-        <li>List Item 1</li>
-        <li>List Item 2</li>
-        <li>List Item 3</li>
-    </ul>
-
-    <ol>
-        <li>List Item 1</li>
-        <li>List Item 2</li>
-        <li>List Item 3</li>
-    </ol>
-    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-    <script type="text/javascript" src="js/libs.dist.js"></script>
-    <script type="text/javascript" src="js/app.dist.js"></script>
+        // $("#btn-santinho").on("click", function() {
+        //     bb.next();
+        //     return false;
+        // });
+    });
+    </script>
 </body>
 
 </html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- 
+   Hi, you're looking at a web page built with love by:
+
+   Ricardo
+
+  /$$$$$$            /$$             /$$                        
+ /$$__  $$          |__/            | $$                        
+| $$  \ $$ /$$   /$$ /$$ /$$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$$
+| $$  | $$| $$  | $$| $$| $$__  $$|_  $$_/   |____  $$ /$$_____/
+| $$  | $$| $$  | $$| $$| $$  \ $$  | $$      /$$$$$$$|  $$$$$$ 
+| $$/$$ $$| $$  | $$| $$| $$  | $$  | $$ /$$ /$$__  $$ \____  $$
+|  $$$$$$/|  $$$$$$/| $$| $$  | $$  |  $$$$/|  $$$$$$$ /$$$$$$$/
+ \____ $$$ \______/ |__/|__/  |__/   \___/   \_______/|_______/ 
+      \__/                                                                      
+
+   ricardoquintas.com   
+   May/2015 
+-->
+<html lang="en" class="no-js demo-4">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>santinho</title>
+    <meta name="description" content="Santinho - Ricardo Quintas" />
+    <meta name="keywords" content="ricardo quintas santinho" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <!-- <link rel="stylesheet" href="css/pure-min.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/bookblock.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo4.css" />
+    <style type="text/css">
+    /*  #hero {
+        height: 100%;
+        background-image: url('img/santinho.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }*/
+    
+    .bb-item {
+        text-align: center;
+    }
+    
+    #hero {
+        /*margin: 0 auto;*/
+        /*text-align: center;*/
+    }
+    </style>
+    <script src="js/modernizr.custom.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bb-custom-wrapper">
+            <div id="bb-bookblock" class="bb-bookblock">
+                <div class="bb-item">                
+                    <img id="hero" src="img/santinho.jpg" alt="">
+                    <button id="btn-santinho">Click me</button>
+                    <!-- <section id="hero"> -->
+                    <!-- <p>Pastry bear claw oat cake danish croissant jujubes danish. Wypas soufflé muffin. Liquorice powder pastry danish. Candy toffee gummi bears chocolate bar lollipop applicake chocolate cake danish brownie.</p> -->
+                    <!-- </section> -->
+                    <!-- <div class="bb-custom-side"> -->
+                    <!-- </div> -->
+                </div>
+                <div class="bb-item">
+               <!--      <div class="bb-custom-side">
+                        <p>Soufflé tootsie roll jelly beans. Sweet icing croissant dessert bear claw. Brownie dessert cheesecake danish jelly pudding bear claw soufflé.</p>
+                    </div>
+                    <div class="bb-custom-side">
+                        <p>Candy canes lollipop macaroon marshmallow gummi bears tiramisu. Dessert croissant cupcake candy canes. Bear claw faworki faworki lemon drops. Faworki marzipan sugar plum jelly-o marzipan jelly-o.</p>
+                    </div> -->
+                </div>
+                <div class="bb-item">
+                    <div class="bb-custom-side">
+                        <p>Croissant pudding gingerbread gummi bears marshmallow halvah. Wafer donut croissant. Cookie muffin jelly beans pie croissant croissant candy canes jelly marshmallow.</p>
+                    </div>
+                    <div class="bb-custom-side">
+                        <p>Wafer donut caramels chocolate caramels sweet roll. Gummi bears powder candy chocolate cake gummi bears icing wafer cupcake. Brownie cotton candy pastry chocolate wypas.</p>
+                    </div>
+                </div>
+                <div class="bb-item">
+                    <div class="bb-custom-side">
+                        <p>Marzipan dragée candy canes chocolate cake. Soufflé faworki jelly gingerbread cupcake. Powder gummies applicake.</p>
+                    </div>
+                    <div class="bb-custom-side">
+                        <p>Cotton candy caramels tootsie roll soufflé powder lemon drops carrot cake danish. Cotton candy candy canes fruitcake muffin gingerbread. Jujubes soufflé gingerbread donut donut.</p>
+                    </div>
+                </div>
+                <div class="bb-item">
+                    <div class="bb-custom-side">
+                        <p>Jujubes fruitcake tiramisu liquorice chocolate cake. Carrot cake faworki donut soufflé oat cake tootsie roll. Fruitcake fruitcake cake sweet pie jelly beans. Chocolate cake candy jujubes oat cake toffee croissant muffin.</p>
+                    </div>
+                    <div class="bb-custom-side">
+                        <p>Chocolate bar tiramisu marzipan. Croissant soufflé croissant lollipop liquorice dragée chupa chups carrot cake. Liquorice lollipop halvah toffee lollipop.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /container -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/jquerypp.custom.js"></script>
+    <script src="js/jquery.bookblock.min.js"></script>
+    <script>
+    $(function() {
+        var $bb = $('#bb-bookblock');
+        var dados = {};
+        var nextDiv = {};
+
+        // Initialize stuff
+        $bb.bookblock();
+        loadData(true);
+
+
+        $("#btn-santinho").on("click", function() {
+            $bb.bookblock('next');
+            return false;
+        });
+
+        function loadData(prepareNextDiv) {
+            $.ajax({
+                url: "conteudo/dados.json",
+                context: document.body
+            }).done(function(data) {
+                dados = data;
+                if (prepareNextDiv) {
+                    getNextDiv();
+                }
+            });
+        }
+
+        function getNextDiv() {
+            var nextId = Math.floor((Math.random() * dados.length));
+            nextDiv = dados.splice(nextId, 1);
+            if (dados.length === 0) {
+                loadData(false);
+            }
+            console.log(nextDiv);
+        }
+    });
+    </script>
+</body>
+
+</html>
