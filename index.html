@@ -1,20 +1,64 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<!-- 
+   Hi, you're looking at a web page built with love by:
+
+   Ricardo
+
+  /$$$$$$            /$$             /$$                        
+ /$$__  $$          |__/            | $$                        
+| $$  \ $$ /$$   /$$ /$$ /$$$$$$$  /$$$$$$    /$$$$$$   /$$$$$$$
+| $$  | $$| $$  | $$| $$| $$__  $$|_  $$_/   |____  $$ /$$_____/
+| $$  | $$| $$  | $$| $$| $$  \ $$  | $$      /$$$$$$$|  $$$$$$ 
+| $$/$$ $$| $$  | $$| $$| $$  | $$  | $$ /$$ /$$__  $$ \____  $$
+|  $$$$$$/|  $$$$$$/| $$| $$  | $$  |  $$$$/|  $$$$$$$ /$$$$$$$/
+ \____ $$$ \______/ |__/|__/  |__/   \___/   \_______/|_______/ 
+      \__/                                                                      
+
+   ricardoquintas.com   
+   May/2015 
+-->
+<html lang="en" class="no-js demo-4">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fullscreen Pageflip Layout with BookBlock</title>
-    <meta name="description" content="Fullscreen Pageflip Layout with BookBlock" />
-    <meta name="keywords" content="fullscreen pageflip, booklet, layout, bookblock, jquery plugin, flipboard layout, sidebar menu" />
-    <meta name="author" content="Codrops" />
-    <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/jquery.jscrollpane.custom.css" />
+    <title>santinho</title>
+    <meta name="description" content="Santinho - Ricardo Quintas" />
+    <meta name="author" content="Ricardo Quintas" />
+    <meta name="keywords" content="ricardo quintas santinho" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="css/pure-min.css" /> -->
     <link rel="stylesheet" type="text/css" href="css/bookblock.css" />
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
     <script src="js/modernizr.custom.79639.js"></script>
     <style type="text/css">
+    #btn-santinho {}
+    
+    .go-back {
+        position: fixed;
+        top: 1%;
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.2);
+        text-align: left;
+    }
+    
+    .go-back a {
+        font-size: 1.5em;
+        color: #000;
+        padding: 0 0 0 1%;
+    }
+    
+    .go-back a:hover {
+        color: #AEBF3B;
+    }
+    
+    .go-back a:before {
+        font-family: FontAwesome;
+        content: "\f060";
+        margin-right: 5px;
+    }
+    
     .content {
         text-align: center;
     }
@@ -26,6 +70,73 @@
     .ornament {
         max-width: 40%;
     }
+    
+    .button {
+        position: relative;
+        top: -70px;
+        /*left: 200px;*/
+        
+        display: inline-block;
+        margin: 0 auto;
+        -webkit-border-radius: 10px;
+        -webkit-box-shadow: 0px 3px rgba(128, 128, 128, 1),
+        /* gradient effects */
+        
+        0px 4px rgba(118, 118, 118, 1), 0px 5px rgba(108, 108, 108, 1), 0px 6px rgba(98, 98, 98, 1), 0px 7px rgba(88, 88, 88, 1), 0px 8px rgba(78, 78, 78, 1), 0px 14px 6px -1px rgba(128, 128, 128, 1);
+        /* shadow */
+        
+        -webkit-transition: -webkit-box-shadow .1s ease-in-out;
+    }
+    
+    .button span {
+        background-color: #E8E8E8;
+        background-image:
+        /* gloss gradient */
+        
+        -webkit-gradient( linear, left bottom, left top, color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.3)), color-stop(100%, rgba(255, 255, 255, 0.2))),
+        /* dark outside gradient */
+        
+        -webkit-gradient( linear, left top, right top, color-stop(0%, rgba(210, 210, 210, 0.3)), color-stop(20%, rgba(210, 210, 210, 0)), color-stop(80%, rgba(210, 210, 210, 0)), color-stop(100%, rgba(210, 210, 210, 0.3))),
+        /* light inner gradient */
+        
+        -webkit-gradient( linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(20%, rgba(255, 255, 255, 0.5)), color-stop(80%, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0))),
+        /* diagonal line pattern */
+        
+        -webkit-gradient( linear, 0% 100%, 100% 0%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(40%, rgba(255, 255, 255, 0)), color-stop(40%, #D2D2D1), color-stop(60%, #D2D2D1), color-stop(60%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
+        -webkit-box-shadow: 0px -1px #fff,
+        /* top highlight */
+        
+        0px 1px 1px #FFFFFF;
+        /* bottom edge */
+        
+        -webkit-background-size: 100%, 100%, 100%, 4px 4px;
+        -webkit-border-radius: 10px;
+        -webkit-transition: -webkit-transform .1s ease-in-out;
+        display: inline-block;
+        padding: 10px 40px 10px 40px;
+        color: #3A474D;
+        text-transform: uppercase;
+        font-family: 'TradeGothicLTStd-BdCn20', 'PT Sans Narrow';
+        font-weight: 700;
+        font-size: 32px;
+        text-shadow: 0px 1px #fff, 0px -1px #262F33;
+    }
+    
+    .button span:hover {
+        color: #AEBF3B;
+        text-shadow: 0px -1px #97A63A;
+        cursor: pointer;
+    }
+    
+    .button:active {
+        -webkit-box-shadow: 0px 3px rgba(128, 128, 128, 1), 0px 4px rgba(118, 118, 118, 1), 0px 5px rgba(108, 108, 108, 1), 0px 6px rgba(98, 98, 98, 1), 0px 7px rgba(88, 88, 88, 1), 0px 8px rgba(78, 78, 78, 1), 0px 10px 2px 0px rgba(128, 128, 128, .6);
+        /* shadow */
+    }
+    
+    .button:active span {
+        -webkit-transform: translate(0, 5px);
+        /* depth of button press */
+    }
     </style>
 </head>
 
@@ -35,51 +146,128 @@
             <div id="bb-bookblock" class="bb-bookblock">
                 <div class="bb-item" id="item1">
                     <div class="content">
-                        <!-- <div class="scroller"> -->
                         <div><img class="hero" src="img/santinho.jpg" alt=""></div>
-                        <!-- </div> -->
-                        <button id="btn-santinho">Click me</button>
+                        <a id="btn-santinho" class="button">
+                            <span>press me</span>
+                        </a>
                         <div><img class="ornament" src="img/ornament.png" alt=""></div>
                     </div>
                 </div>
                 <div class="bb-item" id="item2">
                     <div class="content">
-                        <button id="btn-back">Back</button>
-                        <div class="scroller">
-                            <h2>Nossa Senhora dos Agriões de Cucujães e arredores</h2>
-                            <p>But few of the human race die of old age. Besides the thousand and one diseases flesh is heir to, and the disease which Mrs. O'Flannagan said her husband died of, viz., "Of a Saturday 'tis that poor Mike died," very ma</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid a, officia ipsam. Mollitia quas amet autem, deserunt porro nobis voluptatum. Voluptatum atque sunt, aliquam aperiam quaerat eligendi, at neque harum nam nulla rerum iste quisquam repellat minus excepturi. Fuga hic tempora accusantium repudiandae fugit maxime amet porro, pariatur quam illum harum eos, corporis iste sunt doloribus, fugiat quas nobis doloremque aperiam voluptatibus ipsam eveniet id? Quae mollitia sint exercitationem tenetur asperiores consequuntur magni fugiat cupiditate repellendus doloribus, sed voluptates, alias doloremque reprehenderit nisi perspiciatis debitis quam, nemo dicta temporibus placeat, vel quisquam sapiente tempora. Ut expedita, voluptatibus est ratione consequuntur inventore magnam rem qui laboriosam dolorum. Voluptate, recusandae ipsum quo tenetur, dignissimos nesciunt, velit dolore architecto ipsa dolores delectus omnis et iure. Error mollitia porro aperiam, sapiente earum aspernatur voluptas, nesciunt temporibus, quia enim libero! Est, rerum officia, ullam sapiente, eligendi animi officiis voluptates iusto autem vero nesciunt neque deleniti dolor laudantium dolorem optio et quam rem maxime laborum aspernatur. Nostrum repellendus, libero nulla aspernatur eum, quisquam eius ea est dicta cupiditate, similique modi dignissimos labore! Quis sit placeat a beatae autem fugit. Rem impedit debitis, vero deleniti neque cupiditate quia nam adipisci sunt dolore! Eum, autem vel dolores officiis amet tempora illum ipsum repellendus dolorum fugit cum maiores earum quaerat asperiores expedita voluptatibus quis ipsa alias dolore placeat labore est voluptatem. Explicabo, laborum, corporis? Aspernatur quibusdam adipisci aliquam, quam ducimus necessitatibus a. Tempora ullam vitae accusantium, quibusdam culpa aliquam debitis eaque, voluptatem deserunt. Ad iste optio incidunt maxime temporibus fuga assumenda molestiae delectus, maiores enim ullam recusandae commodi ipsum aperiam expedita atque veniam officia in provident deleniti nobis magnam facere asperiores! Dolorem hic est iste excepturi. Natus, ut, consequatur. Ipsum distinctio inventore tempora cupiditate aspernatur vitae itaque repellat. Perferendis, voluptas, aspernatur. Cumque voluptates pariatur aliquid, distinctio nulla expedita amet.</p>
+                        <div class="go-back">
+                            <a id="btn-back" href="#">Voltar</a>
+                        </div>
+                        <div class="content-here">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- /container -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <!-- <script src="js/jquery.mousewheel.js"></script> -->
-    <!-- <script src="js/jquery.jscrollpane.min.js"></script> -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="js/jquerypp.custom.js"></script>
     <script src="js/jquery.bookblock.js"></script>
-    <!-- <script src="js/page.js"></script> -->
     <script>
-    $(function() {
-        // Page.init();
+    var bb;
 
-        var bb = $('#bb-bookblock').bookblock({
+    $(function() {
+        var dados = {};
+        var nextDiv = {};
+
+        // Initialize stuff
+        loadData(true);
+        initializeBB();
+
+        $("#btn-santinho").on("click", function() {
+            bb.next();
+            return false;
+        });
+
+        $("#btn-back").on("click", function(e) {
+            e.preventDefault();
+            $("#item2 .content").scrollTop(0);
+            bb.prev();
+            createNewItem();
+            return false;
+        });
+
+
+    });
+
+
+    function createNewItem() {
+        getNextDiv();
+
+
+        $("#item2 .content-here").html(["<h2>",
+            "Santo Benedito",
+            "</h2>",
+            "<p>",
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet id quod laboriosam voluptas consectetur, amet eum vel neque labore quidem laudantium, sunt accusamus soluta. Reprehenderit perspiciatis molestiae ducimus vel est voluptatibus quae voluptas aliquid, quas suscipit illo architecto similique impedit ipsum dolorum veritatis accusamus neque odit natus. Possimus autem, dolor sequi ex, soluta, neque eos repudiandae sunt aperiam accusamus aspernatur. Quidem nulla commodi reprehenderit minus officiis, facere sequi veritatis dolore aut corporis eveniet dignissimos cum provident labore possimus! Modi perferendis minus voluptatum veritatis laudantium dolorem vero asperiores neque quis nostrum reprehenderit facere soluta, veniam, doloremque, ipsa esse similique officia.",
+            "</p>",
+            "<p>",
+            "(c. 480 – 543 or 547)",
+            "</p>",
+            "<p>Clique <a href='",
+            "http://en.wikipedia.org/wiki/Benedict_of_Nursia",
+            "' target='_blank'>aqui</a> para saber mais</p>",
+            "<img style='width: 60em' src='conteudo/",
+            "Fra_Angelico_031.jpg",
+            "'>"
+        ].join(""));
+
+
+        // $("#item2 .content-here").html(["<h2>",
+        //     nextDiv[0].nome,
+        //     "</h2>",
+        //     "<p>",
+        //     nextDiv[0].desc,
+        //     "</p>",
+        //     "<p>",
+        //     nextDiv[0].data,
+        //     "</p>",
+        //     "<p>Clique <a href='",
+        //     nextDiv[0].www,
+        //     "' target='_blank'>aqui</a> para saber mais</p>",
+        //     "<p>",
+        //     nextDiv[0].img,
+        //     "</p>"
+        // ].join(""));
+    }
+
+
+    function loadData(prepareNextDiv) {
+        $.ajax({
+            url: "conteudo/dados.json",
+            context: document.body
+        }).done(function(data) {
+            dados = data;
+            if (prepareNextDiv) {
+                createNewItem();
+            }
+        });
+    }
+
+    function getNextDiv() {
+        var nextId = Math.floor((Math.random() * dados.length));
+        nextDiv = dados.splice(nextId, 1);
+        if (dados.length === 0) {
+            loadData(false);
+        }
+        console.log(nextDiv);
+    }
+
+    function initializeBB() {
+        bb = $('#bb-bookblock').bookblock({
             speed: 800,
             perspective: 2000,
-            nextEl: "#btn-santinho",
-            prevEl: "#btn-back",
+            // nextEl: "#btn-santinho",
+            // prevEl: "#btn-back",
             shadowSides: 0.8,
             shadowFlip: 0.4
         });
-
-        // $("#btn-santinho").on("click", function() {
-        //     bb.next();
-        //     return false;
-        // });
-    });
+    }
     </script>
 </body>
 
