@@ -147,7 +147,7 @@
                 <div class="bb-item" id="item1">
                     <div class="content">
                         <div><img class="hero" src="img/santinho.jpg" alt=""></div>
-                        <a id="btn-santinho" class="button">
+                        <a href="#" id="btn-santinho" class="button">
                             <span>press me</span>
                         </a>
                         <div><img class="ornament" src="img/ornament.png" alt=""></div>
@@ -171,6 +171,11 @@
     <script>
     var bb;
 
+    // if the user presses the browser back button, we should go to previous div
+    $(window).on("popstate", function(e) {
+        bb.prev();
+    });
+
     $(function() {
         var dados = {};
         var nextDiv = {};
@@ -180,6 +185,7 @@
         initializeBB();
 
         $("#btn-santinho").on("click", function() {
+            history.pushState(null, "dummy", "?dummy");
             bb.next();
             return false;
         });
@@ -192,28 +198,39 @@
             return false;
         });
 
-
     });
 
 
     function createNewItem() {
         getNextDiv();
+        var t_www = "";
+
+        nextDiv.nome = "Santo Benedito";
+        nextDiv.desc = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet id quod laboriosam voluptas consectetur, amet eum vel neque labore quidem laudantium, sunt accusamus soluta. Reprehenderit perspiciatis molestiae ducimus vel est voluptatibus quae voluptas aliquid, quas suscipit illo architecto similique impedit ipsum dolorum veritatis accusamus neque odit natus. Possimus autem, dolor sequi ex, soluta, neque eos repudiandae sunt aperiam accusamus aspernatur. Quidem nulla commodi reprehenderit minus officiis, facere sequi veritatis dolore aut corporis eveniet dignissimos cum provident labore possimus! Modi perferendis minus voluptatum veritatis laudantium dolorem vero asperiores neque quis nostrum reprehenderit facere soluta, veniam, doloremque, ipsa esse similique officia.";
+        nextDiv.data_local = "(c. 480 – 543 or 547) - Italia";
+        nextDiv.img = "Fra_Angelico_031.jpg";
+        nextDiv.www = "http://en.wikipedia.org/wiki/Benedict_of_Nursia";
 
 
-        $("#item2 .content-here").html(["<h2>",
-            "Santo Benedito",
+        if (nextDiv.www) {
+            t_www = "<p>Clique <a href='" +
+                nextDiv.www +
+                "' target='_blank'>aqui</a> para saber mais</p>";
+        }
+
+        $("#item2 .content-here").html([
+            "<h2>",
+            nextDiv.nome,
             "</h2>",
-            "<p>",
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet id quod laboriosam voluptas consectetur, amet eum vel neque labore quidem laudantium, sunt accusamus soluta. Reprehenderit perspiciatis molestiae ducimus vel est voluptatibus quae voluptas aliquid, quas suscipit illo architecto similique impedit ipsum dolorum veritatis accusamus neque odit natus. Possimus autem, dolor sequi ex, soluta, neque eos repudiandae sunt aperiam accusamus aspernatur. Quidem nulla commodi reprehenderit minus officiis, facere sequi veritatis dolore aut corporis eveniet dignissimos cum provident labore possimus! Modi perferendis minus voluptatum veritatis laudantium dolorem vero asperiores neque quis nostrum reprehenderit facere soluta, veniam, doloremque, ipsa esse similique officia.",
+            "<p class='data_local'>",
+            nextDiv.data_local,
             "</p>",
+            t_www,
             "<p>",
-            "(c. 480 – 543 or 547)",
+            nextDiv.desc,
             "</p>",
-            "<p>Clique <a href='",
-            "http://en.wikipedia.org/wiki/Benedict_of_Nursia",
-            "' target='_blank'>aqui</a> para saber mais</p>",
-            "<img style='width: 60em' src='conteudo/",
-            "Fra_Angelico_031.jpg",
+            "<img style='width: 100%' src='conteudo/",
+            nextDiv.img,
             "'>"
         ].join(""));
 
@@ -225,8 +242,7 @@
         //     nextDiv[0].desc,
         //     "</p>",
         //     "<p>",
-        //     nextDiv[0].data,
-        //     "</p>",
+        //     nextDiv[0].data_local    //     "</p>",
         //     "<p>Clique <a href='",
         //     nextDiv[0].www,
         //     "' target='_blank'>aqui</a> para saber mais</p>",
