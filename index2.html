@@ -32,174 +32,7 @@
     <link rel="stylesheet" type="text/css" href="css/bookblock.css" />
     <link rel="stylesheet" type="text/css" href="css/custom.css" />
     <script src="js/modernizr.js"></script>
-    <style type="text/css">
-    .go-back {
-        position: fixed;
-        top: 1%;
-        padding: 10px;
-        background-color: rgba(0, 0, 0, 0.2);
-        text-align: left;
-    }
-    
-    .go-back a {
-        font-size: 1.5em;
-        color: #000;
-        padding: 0 0 0 1%;
-    }
-    
-    .go-back a:hover {
-        color: #3C69FF;
-    }
-    
-    .go-back a:before {
-        font-family: FontAwesome;
-        content: "\f060";
-        margin-right: 5px;
-    }
-    
-    .content {
-        text-align: center;
-    }
-    
-    .hero {
-        margin-top: 5%;
-        max-width: 100%;
-    }
-    
-    .ornament {
-        max-width: 40%;
-    }
-    
-    .button {
-        position: relative;
-        top: -70px;
-        /*left: 200px;*/
-        
-        display: inline-block;
-        margin: 0 auto;
-        -webkit-border-radius: 10px;
-        -webkit-box-shadow: 0px 3px rgba(128, 128, 128, 1),
-        /* gradient effects */
-        
-        0px 4px rgba(118, 118, 118, 1), 0px 5px rgba(108, 108, 108, 1), 0px 6px rgba(98, 98, 98, 1), 0px 7px rgba(88, 88, 88, 1), 0px 8px rgba(78, 78, 78, 1), 0px 14px 6px -1px rgba(128, 128, 128, 1);
-        /* shadow */
-        
-        -webkit-transition: -webkit-box-shadow .1s ease-in-out;
-    }
-    
-    .button span {
-        background-color: #E8E8E8;
-        background-image:
-        /* gloss gradient */
-        
-        -webkit-gradient( linear, left bottom, left top, color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0.3)), color-stop(100%, rgba(255, 255, 255, 0.2))),
-        /* dark outside gradient */
-        
-        -webkit-gradient( linear, left top, right top, color-stop(0%, rgba(210, 210, 210, 0.3)), color-stop(20%, rgba(210, 210, 210, 0)), color-stop(80%, rgba(210, 210, 210, 0)), color-stop(100%, rgba(210, 210, 210, 0.3))),
-        /* light inner gradient */
-        
-        -webkit-gradient( linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(20%, rgba(255, 255, 255, 0.5)), color-stop(80%, rgba(255, 255, 255, 0.5)), color-stop(100%, rgba(255, 255, 255, 0))),
-        /* diagonal line pattern */
-        
-        -webkit-gradient( linear, 0% 100%, 100% 0%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(40%, rgba(255, 255, 255, 0)), color-stop(40%, #D2D2D1), color-stop(60%, #D2D2D1), color-stop(60%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
-        -webkit-box-shadow: 0px -1px #fff,
-        /* top highlight */
-        
-        0px 1px 1px #FFFFFF;
-        /* bottom edge */
-        
-        -webkit-background-size: 100%, 100%, 100%, 4px 4px;
-        -webkit-border-radius: 10px;
-        -webkit-transition: -webkit-transform .1s ease-in-out;
-        display: inline-block;
-        padding: 10px 40px 10px 40px;
-        color: #3A474D;
-        text-transform: uppercase;
-        font-family: 'TradeGothicLTStd-BdCn20', 'PT Sans Narrow';
-        font-weight: 700;
-        font-size: 32px;
-        text-shadow: 0px 1px #fff, 0px -1px #262F33;
-    }
-    
-    .button span:hover {
-        color: #3C69FF;
-        text-shadow: 0px -1px #3C69FF;
-        cursor: pointer;
-    }
-    
-    .button:active {
-        -webkit-box-shadow: 0px 3px rgba(128, 128, 128, 1), 0px 4px rgba(118, 118, 118, 1), 0px 5px rgba(108, 108, 108, 1), 0px 6px rgba(98, 98, 98, 1), 0px 7px rgba(88, 88, 88, 1), 0px 8px rgba(78, 78, 78, 1), 0px 10px 2px 0px rgba(128, 128, 128, .6);
-        /* shadow */
-    }
-    
-    .button:active span {
-        -webkit-transform: translate(0, 5px);
-        /* depth of button press */
-    }
-    
-    .img-santo {
-        max-width: 70%;
-    }
-    
-    .font-bold {
-        font-weight: bold !important;
-    }
-    
-    .font-bold a {
-        color: #3C69FF;
-    }
-    
-    .font-bold a:hover {
-        color: #000;
-        text-decoration: underline;
-    }
-    
-    @media screen and (max-width: 800px) {
-        #btn-santinho {
-            margin-top: 50px;
-        }
-        .ornament {
-            max-width: 70%;
-        }
-    }
-    
-    @media screen and (max-width: 600px) {
-        .hero {
-            margin-top: 30%;
-        }
-        #btn-santinho {
-            margin-top: 70px;
-            margin-bottom: 0;
-        }
-        #btn-santinho span {
-            width: 120px;
-            padding: 7px 5px 5px 5px;
-            font-size: 20px
-        }
-        .ornament {
-            max-width: 90%;
-        }
-    }
-    
-    @media screen and (max-width: 600px) and (orientation: landscape) {
-        .hero {
-            margin-top: 2%;
-        }
-        #btn-santinho {
-            margin-top: 25px;
-            margin-bottom: 0;
-        }
-        #btn-santinho span {
-            width: 120px;
-            padding: 7px 5px 5px 5px;
-            font-size: 20px
-        }
-        .ornament {
-            max-width: 70%;
-            margin-top: -40px;
-        }
-    }
-    </style>
+ 
 </head>
 
 <body>
@@ -277,14 +110,14 @@
             "<h2>",
             nextDiv.nome,
             "</h2>",
-            "<p class='font-bold'>",
+            "<p class='font-bold saint-font-body'>",
             nextDiv.data_local,
             "</p>",
             "<img class='img-santo' src='conteudo/",
             nextDiv.img,
             "'>",
             t_www,
-            "<p>",
+            "<p class='saint-font-body'>",
             nextDiv.desc,
             "</p>"
         ].join(""));
